@@ -17,7 +17,8 @@ body{
 	background: #0767c8 !important;
 }
 .Avatar , .feed-item .avatar img,
-.zh-question-followers-sidebar>.list .zm-item-img-avatar{border-radius: 50% !important;}
+.zh-question-followers-sidebar>.list .zm-item-img-avatar,
+.zm-list-avatar{border-radius: 50% !important;}
 /*滚动回页面顶部*/
 .zh-backtotop .btn-action{
 	width: 50px !important;
@@ -108,4 +109,5 @@ body{
 .modal-dialog-title{border-radius: 0px !important;}
 .zh-general-list.topstory .feed-meta .ignore{top: 0px !important;}
 .tooltip .tooltip-inner{border-radius: 0px !important;}
-.zm-votebar{margin-left: -52px !important;}
+.zm-votebar{margin: -10px 0 0 -52px !important;}
+.ac-renderer{left: 12px !important;}
