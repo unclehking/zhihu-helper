@@ -1,0 +1,29 @@
+﻿{
+	"name": "知乎MD主题",
+	"version": "1.0",
+	"description":"知乎material design主题",
+	"background": {
+		"scripts": ["res/js/background.js"]
+	},
+	"content_scripts": [
+		{
+			"matches": ["https://*.zhihu.com/*"],
+			"css":["res/css/style.css"],
+			"js":["res/js/main.js"],
+			"run_at":"document_start"
+		}
+	],
+	"permissions": [
+		"https://*.zhihu.com/*","tabs"
+	],
+	"icons": {
+		"16": "res/pic/icon_16.png",
+		"48": "res/pic/icon_48.png",
+		"128": "res/pic/icon_128.png"
+	},
+	"browser_action": {
+		"name": "知乎MD主题",
+		"default_icon": "res/pic/icon_128.png"
+	},
+	"manifest_version": 2
+}
