@@ -1,7 +1,6 @@
 /*HKing 2016-03-10*/
 :root{
 	--bn: none ;
-	--i : !important;
 }
 /*滚动条*/
 ::-webkit-scrollbar {width: 8px;height:6px;}
@@ -11,7 +10,8 @@
 ::-webkit-scrollbar-thumb:horizontal:hover{background: #7e7e7e}
 
 body{
-	background-color: #ECEFF1 !important;
+	/*background-color: #ECEFF1 !important;*/
+	background-color: #f4f4f4 !important;
 }
 .zu-top{
 	background: #0767c8 !important;
@@ -20,6 +20,7 @@ body{
 .zh-question-followers-sidebar>.list .zm-item-img-avatar,
 .zm-list-avatar{border-radius: 50% !important;}
 /*滚动回页面顶部*/
+.zh-backtotop{bottom: 30px !important;}
 .zh-backtotop .btn-action{
 	width: 50px !important;
 	height: 50px !important;
@@ -111,3 +112,35 @@ body{
 .tooltip .tooltip-inner{border-radius: 0px !important;}
 .zm-votebar{margin: -10px 0 0 -52px !important;}
 .ac-renderer{left: 12px !important;}
+.zm-votebar.goog-scrollfloater-floating{top: 60px !important;display: none !important;}
+
+
+
+/*阅读模式*/
+#hkingView{
+	position: fixed;
+	background-color:rgba(0, 0, 0, 0.6);
+	top: 0px;
+	left: 0;
+	z-index: 99;
+	width: 100%;
+	height: 100%;
+	display: none;
+}
+.readingOne{
+	position: absolute;
+	top: 0px;
+	left: auto;
+	width: 900px;
+	z-index: 999;
+	font-size: 16px;
+}
+body.reading .zm-item-answer:not(.readingOne),
+body.reading .zu-top,
+body.reading .zu-main-sidebar,
+body.reading .zu-main-content-inner > *:not(#zh-question-answer-wrap){
+	display: none;
+}
+body.reading .zm-meta-panel{top: 0 !important;}
+body.reading .zh-backtotop{margin-left: 500px !important;}
+.item-collapse{left: -webkit-calc((100% - 960px) / 2) !important;}

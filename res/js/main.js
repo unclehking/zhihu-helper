@@ -8,7 +8,8 @@ setLrcBg = (src,fe) =>{
 	}
 }
 
-//双击显示歌词区域进入/退出全屏“ktv”歌词模式
+
+//双击进入“ktv”歌词模式
 document.addEventListener('DOMContentLoaded', ()=>{
 	let lrcTarget = document.querySelector("#lrcCol");
 	if(!lrcTarget){
@@ -25,4 +26,33 @@ document.addEventListener('DOMContentLoaded', ()=>{
 			lrcTarget.webkitRequestFullScreen();
 		};
 	});
+});
+
+var currentTarget = {};
+
+jQuery(function($){
+
+	$("body").append('<div id="hkingView"></div>')
+
+	$(document).on("dblclick",".zm-item-answer",function(){
+		currentTarget.target = $(this);
+		currentTarget.position = $(document).scrollTop();
+		$("body").addClass('reading');
+		$(this).addClass('readingOne').after($("#hkingView").show());
+		$(document).scrollTop(0)
+	})
+
+	$("#hkingView").click(function(){
+		$("body").removeClass('reading');
+		currentTarget.target.removeClass('readingOne');
+		$(this).hide();
+		$(document).scrollTop(currentTarget.position);
+		console.log(currentTarget.target.find("button.item-collapse"));
+		// $("button.item-collapse").css({
+		// 	"left":"100px"
+		// })
+	});
+
+
+
 });

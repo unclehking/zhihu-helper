@@ -9,7 +9,7 @@
 		{
 			"matches": ["https://*.zhihu.com/*"],
 			"css":["res/css/style.css"],
-			"js":["res/js/main.js"],
+			"js":["res/js/jquery.min.js","res/js/main.js"],
 			"run_at":"document_start"
 		}
 	],
