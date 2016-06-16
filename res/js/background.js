@@ -1,5 +1,5 @@
 ﻿/*HKing 2016-03-10*/
-const  url="d3d3LmJhaWR1LmNvbQ==";
+const  url="d3d3LnpoaWh1LmNvbQ==";
 chrome.browserAction.onClicked.addListener((tab) =>{
 	chrome.tabs.getAllInWindow(null, fuckBat = tabs =>{
 		for(var t of tabs){
