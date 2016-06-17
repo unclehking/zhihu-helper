@@ -14,7 +14,7 @@
 		}
 	],
 	"permissions": [
-		"https://*.zhihu.com/*","tabs"
+		"https://*.zhihu.com/*","tabs","notifications"
 	],
 	"icons": {
 		"16": "res/pic/icon_16.png",
