@@ -26,8 +26,7 @@
 		"default_icon": "res/pic/icon_128.png"
 	},
 	"web_accessible_resources": [
-       "res/pic/up.svg",
-	    "res/pic/icon_128.png"
+       "res/pic/up.svg"
    	],
 	"manifest_version": 2
 }

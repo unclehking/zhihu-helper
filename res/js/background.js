@@ -1,5 +1,6 @@
 ﻿/*HKing 2016-03-10*/
-const  url="d3d3LnpoaWh1LmNvbQ==";
+const version = "1.0";
+const url="d3d3LnpoaWh1LmNvbQ==";
 chrome.browserAction.onClicked.addListener((tab) =>{
 	chrome.tabs.getAllInWindow(null, fuckBat = tabs =>{
 		for(var t of tabs){
@@ -14,12 +15,12 @@ chrome.browserAction.onClicked.addListener((tab) =>{
 });
 
 var xhr = new XMLHttpRequest();
-xhr.open ('GET','example.php');
+xhr.open ('GET','https://raw.githubusercontent.com/unclehking/zhihu-material-design-theme/master/version.json');
 xhr.send();
 xhr.onreadystatechange = function (){
-    if ( xhr.readyState == 4 && xhr.status == 200 ) {
-        alert(xhr.responseText );
-    } else {
-        alert(xhr.statusText);
+    if ( xhr.readyState == 4 && xhr.status == 200 ){
+		if(xhr.responseText == version){
+			console.log(xhr.responseText);
+		}
     }
 };　
