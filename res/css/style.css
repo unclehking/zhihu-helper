@@ -115,7 +115,17 @@ body{
 .ac-renderer{left: 12px !important;}
 .zm-votebar.goog-scrollfloater-floating{top: 60px !important;display: none !important;}
 
-
+/*我的主页*/
+.ProfileCard,
+.zm-profile-section-wrap{
+	background-color: #ffffff;
+	border-radius: 0px !important;
+	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .05), 0 1px 4px 0 rgba(0, 0, 0, .08), 0 3px 1px -2px rgba(0, 0, 0, .2) !important;
+}
+.ProfileAvatarEditor{
+	border-radius: 50% !important;
+	box-shadow: none !important;
+}
 
 /*阅读模式*/
 #hkingView{
@@ -143,19 +153,37 @@ body.reading .feed-item:not(.readingOne),
 body.reading .list .item:not(.readingOne),
 body.reading .zu-main-content-inner > *:not(.zh-question-answer-wrapper),
 body.reading #zh-load-more,
-body.reading #zh-footer{
+body.reading #zh-footer,
+body.reading .zu-global-notify,
+body.reading .item-collapse,
+body.reading .zu-button-more{
 	display: none !important;
 }
 body.reading .zu-main-content-inner > #zh-question-list,
-body.reading .zu-main-content-inner > .list{
+body.reading .zu-main-content-inner > .list,
+body.reading .zu-main-content-inner > .zm-topic-list-container,
+body.reading .zu-main-content-inner > #zh-profile-activity-wrap{
 	display: block !important;
 }
 body.reading .zu-main-feed-con{border-top: none;}
 body.reading .zm-meta-panel,
 body.reading .zm-editable-toolbar-container{top: 0 !important;}
 body.reading .zh-backtotop{margin-left: 500px !important;}
-.item-collapse{left: -webkit-calc((100% - 960px) / 2) !important;}
 
 .zm-votebar .up, .zm-votebar .down{background: #ffffff !important;}
 .zm-votebar .up:hover, .zm-votebar .down:hover{background: #698ebf !important;}
 body.reading .zm-editable-content{padding: 0 20px;}
+
+.item-collapse{
+	display: block;
+	left: -webkit-calc((100% - 960px) / 2 + 592px) !important;
+  	text-indent: -9999px;
+  	width: 30px;
+  	height: 30px;
+	overflow: hidden;
+	background-size: 80% !important;
+	background-repeat: no-repeat !important;
+	background-color: transparent !important;
+	background-position: center center !important;
+  	background-image: url("chrome-extension://__MSG_@@extension_id__/res/pic/up.svg") !important;
+}

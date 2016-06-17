@@ -33,7 +33,7 @@ jQuery(function($){
 	});
 
 	$("#hkingView").click(function(){
-		$("body").removeClass('reading');
+		$("body").removeClass('reading').append($(this));
 		currentTarget.target.removeClass('readingOne');
 		$(this).hide();
 		$(document).scrollTop(currentTarget.position);
