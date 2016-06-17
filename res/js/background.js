@@ -15,38 +15,49 @@ chrome.browserAction.onClicked.addListener((tab) =>{
 });
 
 
-
-var xhr = new XMLHttpRequest();
-xhr.open ('GET','https://raw.githubusercontent.com/unclehking/zhihu-material-design-theme/master/version.json');
-xhr.send();
-xhr.onreadystatechange = function (){
-    if ( xhr.readyState == 4 && xhr.status == 200 ){
-		if(JSON.parse(xhr.responseText).version == version){
-			console.log(xhr.responseText);
-		}else{
-			//
+// 版本更新检查
+function checkVersion(){
+	var xhr = new XMLHttpRequest();
+	xhr.open ('GET','https://raw.githubusercontent.com/unclehking/zhihu-material-design-theme/master/manifest.json');
+	xhr.send();
+	xhr.onreadystatechange = function (){
+	    if ( xhr.readyState == 4 && xhr.status == 200 ){
+			if(JSON.parse(xhr.responseText).version != version){
+				notify();
+			}
+	    }
+	};　
+	function notify(){
+		var opt = {
+	        type: "list",
+	        title: "知乎MD主题扩展有更新！",
+	        message: "msg",
+	        iconUrl: "res/pic/icon_128.png",
+	        items: [{ title: "", message: "点击下载最新版本！"}]
 		}
-    }
-};　
+	  	chrome.notifications.create('',opt,function(id){
+			setTimeout(function(){
+				chrome.notifications.clear(id,function(){});
+			},8000);
+		});
 
-function notify(){
-	var opt = {
-        type: "list",
-        title: "知乎MD主题扩展有更新！",
-        message: "msg",
-        iconUrl: "res/pic/icon_128.png",
-        items: [
-			{ title: "1.", message: "点击进入下载最新版本！"}
-		]
-	}
-  	chrome.notifications.create('',opt,function(id){
-
+	};
+	chrome.notifications.onClicked.addListener(function(id){
+		chrome.downloads.download(
+			{
+				url:"https://raw.githubusercontent.com/unclehking/zhihu-material-design-theme/master/zhihu-material-design-theme.crx",
+				filename:'zhihu-material-design-theme.crx'
+			},
+			function(id){}
+		);
 	});
-
 }
 
-notify();
-
-chrome.notifications.onClicked.addListener(function(id){
-	window.open("https://github.com/unclehking/zhihu-material-design-theme");
-});
+chrome.runtime.onMessage.addListener(
+	f_nancy = (request, sender, sendResponse) =>{
+		if(!f_nancy.isFirst){
+			checkVersion();
+			f_nancy.isFirst = true;
+		}
+	}
+);

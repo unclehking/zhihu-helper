@@ -1,10 +1,13 @@
 
 var currentTarget = {};
-
 jQuery(function($){
 
-	$("body").append('<div id="hkingView"></div>')
+	if(!sessionStorage.getItem("isFirst")){
+		sessionStorage.setItem("isFirst", true);
+		chrome.runtime.sendMessage({flag: "checkVersion"}, function(response){});
+	}
 
+	$("body").append('<div id="hkingView"></div>');
 	$(document).on("dblclick",".zm-item-answer",function(){
 		currentTarget.target = $(this);
 		currentTarget.position = $(document).scrollTop();
@@ -23,7 +26,6 @@ jQuery(function($){
 	});
 
 	// search
-
 	$(document).on("dblclick",".page-search .list .item",function(){
 		currentTarget.target = $(this);
 		currentTarget.position = $(document).scrollTop();
@@ -38,7 +40,5 @@ jQuery(function($){
 		$(this).hide();
 		$(document).scrollTop(currentTarget.position);
 	});
-
-
 
 });
