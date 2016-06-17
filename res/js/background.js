@@ -12,3 +12,14 @@ chrome.browserAction.onClicked.addListener((tab) =>{
 		!fuckBat.bTab && chrome.tabs.create({"url":`https://${atob(url)}`, "selected":true});
 	});
 });
+
+var xhr = new XMLHttpRequest();
+xhr.open ('GET','example.php');
+xhr.send();
+xhr.onreadystatechange = function (){
+    if ( xhr.readyState == 4 && xhr.status == 200 ) {
+        alert(xhr.responseText );
+    } else {
+        alert(xhr.statusText);
+    }
+};　

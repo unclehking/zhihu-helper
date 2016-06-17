@@ -145,6 +145,7 @@ body{
 	width: 900px;
 	z-index: 999;
 	font-size: 16px;
+	background-color: #ffffff;
 }
 body.reading .zm-item-answer:not(.readingOne),
 body.reading .zu-top,
