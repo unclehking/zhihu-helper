@@ -99,7 +99,9 @@ body{
 	border-radius: 16px !important;
 }
 .feed-item,#zh-question-answer-wrap>.zm-item-answer,
-.page-search .list .item{
+.page-search .list .item,
+#zh-list-answer-wrap .zm-item,
+#zh-question-collapsed-wrap>.zm-item-answer{
 	margin-top: 10px;
 	padding: 10px !important;
 	background-color: #ffffff;
@@ -111,18 +113,20 @@ body{
 .modal-dialog-title{border-radius: 0px !important;}
 .zh-general-list.topstory .feed-meta .ignore{top: 0px !important;}
 .tooltip .tooltip-inner{border-radius: 0px !important;}
-.zm-votebar{margin: -10px 0 0 -52px !important;}
+#zh-question-answer-wrap .zm-votebar,
+#zh-question-collapsed-wrap .zm-votebar{margin: -10px 0 0 -52px !important;}
 .ac-renderer{left: 12px !important;}
 .zm-votebar.goog-scrollfloater-floating{top: 60px !important;display: none !important;}
 
-/*我的主页*/
+
 .ProfileCard,
 .zm-profile-section-wrap{
 	background-color: #ffffff;
 	border-radius: 0px !important;
 	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .05), 0 1px 4px 0 rgba(0, 0, 0, .08), 0 3px 1px -2px rgba(0, 0, 0, .2) !important;
 }
-.ProfileAvatarEditor{
+.ProfileAvatarEditor,
+.zm-topic-cat-sub img{
 	border-radius: 50% !important;
 	box-shadow: none !important;
 }
@@ -130,7 +134,7 @@ body{
 /*阅读模式*/
 #hkingView{
 	position: fixed;
-	background-color:rgba(0, 0, 0, 0.6);
+	background-color:#616161;
 	top: 0px;
 	left: 0;
 	z-index: 99;
@@ -157,15 +161,46 @@ body.reading #zh-load-more,
 body.reading #zh-footer,
 body.reading .zu-global-notify,
 body.reading .item-collapse,
-body.reading .zu-button-more{
+body.reading .zu-button-more,
+body.reading #zh-profile-activity-page-list > .zm-item:not(.readingOne),
+body.reading #zh-profile-activity-wrap .zm-profile-section-head,
+body.reading #zh-list-answer-wrap .zm-item:not(.readingOne),
+body.reading .tab-navs,
+body.reading .zu-main-content-inner > div[itemscope] > div:not(.zm-topic-list-container),
+body.reading #zh-profile-answer-list .zm-item:not(.readingOne),
+body.reading .zu-main-content-inner .border-pager,
+body.reading .zu-main-content-inner .zm-profile-section-head,
+body.reading #zh-main-feed-fresh-button,
+body.reading #zh-profile-ask-wrap,
+body.reading .feed-item .ignore,
+body.reading #zh-profile-post-list > .zm-item:not(.readingOne)
+{
 	display: none !important;
 }
 body.reading .zu-main-content-inner > #zh-question-list,
 body.reading .zu-main-content-inner > .list,
 body.reading .zu-main-content-inner > .zm-topic-list-container,
-body.reading .zu-main-content-inner > #zh-profile-activity-wrap{
+body.reading .zu-main-content-inner > #zh-profile-activity-wrap,
+body.reading .zu-main-content-inner > #js-explore-tab,
+body.reading .zu-main-content-inner  .readingOne .zm-item-answer,
+body.reading .zu-main-content-inner #zh-list-answer-wrap,
+body.reading .zu-main-content-inner > div[itemscope],
+body.reading .zu-main-content-inner > .zm-profile-section-wrap
+{
 	display: block !important;
 }
+body.reading .zu-main-content-inner > .zm-profile-section-wrap.zm-profile-section-grid,
+body.reading .zm-profile-section-grid + .zm-profile-section-wrap
+{
+	display: none !important;
+}
+body.reading #zh-profile-activity-wrap{border: none !important;}
+body.reading #zh-profile-activity-wrap .readingOne,
+#zh-profile-answer-list-outer .readingOne
+{padding-right: 20px;}
+body.reading #zh-profile-activity-wrap .readingOne .zm-profile-section-main,
+#zh-profile-answer-list-outer .readingOne .question_link
+{margin-left: 12px;}
 body.reading .zu-main-feed-con{border-top: none;}
 body.reading .zm-meta-panel,
 body.reading .zm-editable-toolbar-container{top: 0 !important;}
@@ -188,3 +223,34 @@ body.reading .zm-editable-content{padding: 0 20px;}
 	background-position: center center !important;
   	background-image: url("chrome-extension://__MSG_@@extension_id__/res/pic/up.svg") !important;
 }
+
+.zg-btn-green, .zg-btn-follow,.zg-btn-blue{
+	background: #8ab923 !important;
+	border: none !important;
+	border-radius: 2px !important;
+	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .05), 0 1px 4px 0 rgba(0, 0, 0, .08), 0 3px 1px -2px rgba(0, 0, 0, .2) !important;
+	color: #ffffff !important;
+}
+.zg-btn-blue{background: #1472cf !important;}
+.zg-btn-white{
+	background: #fafafa !important;
+	border: none !important;
+	border-radius: 2px !important;
+	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .05), 0 1px 4px 0 rgba(0, 0, 0, .08), 0 3px 1px -2px rgba(0, 0, 0, .2) !important;
+}
+
+body.reading #zh-profile-activity-wrap .zm-votebar{margin: 0px 0px 0px -46px !important;}
+.comment-app-holder > div{border-radius: 0px !important;}
+.readingOne{border-radius: 3px !important;}
+#js-explore-tab .tab-navs .tab-nav.active>a, html.no-touchevents .tab-navs .tab-nav.active>a:hover{
+	background: #f4f4f4 !important;
+}
+.zm-topic-cat-main .zm-topic-cat-item a{background-color: #ffffff;}
+.topics-plaza{
+	background: #ffffff !important;
+	border-radius: 0px !important;
+	border-color: #f4f4f4 !important;
+	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .05), 0 1px 4px 0 rgba(0, 0, 0, .08), 0 3px 1px -2px rgba(0, 0, 0, .2) !important;
+}
+#zh-topic-feed-list .combine:not(.first-combine) .zm-votebar{margin: -10px 0 0 -70px !important;}
+#zh-topic-feed-list .combine:not(.first-combine) .zm-item-vote{margin: -10px 0 0 -22px !important;}
