@@ -257,3 +257,4 @@ body.reading #zh-profile-activity-wrap .zm-votebar{margin: 0px 0px 0px -46px !im
 }
 #zh-topic-feed-list .combine:not(.first-combine) .zm-votebar{margin: -10px 0 0 -70px !important;}
 #zh-topic-feed-list .combine:not(.first-combine) .zm-item-vote{margin: -10px 0 0 -22px !important;}
+.page-search .related .list{background-color: #ffffff;}
