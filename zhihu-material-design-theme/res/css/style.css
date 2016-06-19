@@ -114,7 +114,9 @@ body{
 .modal-dialog-title{border-radius: 0px !important;}
 .zh-general-list.topstory .feed-meta .ignore{top: 0px !important;}
 .tooltip .tooltip-inner,
-.zg-form-text-input{border-radius: 0px !important;}
+.zg-form-text-input,
+.zu-noti7-popup.zu-top-nav-live,
+.zu-top-nav-live-inner{border-radius: 0px !important;}
 .zg-form-text-input{border: solid #cccccc 1px !important;}
 #zh-question-answer-wrap .zm-votebar,
 #zh-question-collapsed-wrap .zm-votebar{margin: -10px 0 0 -52px !important;}
@@ -245,7 +247,10 @@ body.reading .zm-editable-content{padding: 0 20px;}
 body.reading #zh-profile-activity-wrap .zm-votebar{margin: 0px 0px 0px -46px !important;}
 .comment-app-holder > div{border-radius: 0px !important;}
 .readingOne{border-radius: 3px !important;}
-#js-explore-tab .tab-navs .tab-nav.active>a, html.no-touchevents .tab-navs .tab-nav.active>a:hover{
+#js-explore-tab .tab-navs .tab-nav.active>a,
+html.no-touchevents .tab-navs li.tab-nav.active>a:hover,
+.tab-navs > li.tab-nav.active>a
+{
 	background: #f4f4f4 !important;
 }
 .zm-topic-cat-main .zm-topic-cat-item a{background-color: #ffffff;}
@@ -258,3 +263,4 @@ body.reading #zh-profile-activity-wrap .zm-votebar{margin: 0px 0px 0px -46px !im
 #zh-topic-feed-list .combine:not(.first-combine) .zm-votebar{margin: -10px 0 0 -70px !important;}
 #zh-topic-feed-list .combine:not(.first-combine) .zm-item-vote{margin: -10px 0 0 -22px !important;}
 .page-search .related .list{background-color: #ffffff;}
+ul.related-items .item-card.topic-card{box-shadow: none !important;}

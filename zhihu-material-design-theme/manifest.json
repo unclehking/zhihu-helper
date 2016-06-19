@@ -1,6 +1,6 @@
 ﻿{
 	"name": "知乎MD主题",
-	"version": "1.0",
+	"version": "1.1",
 	"description":"知乎material design主题,双击答案进入阅读模式！",
 	"background": {
 		"scripts": ["res/js/background.js"]
