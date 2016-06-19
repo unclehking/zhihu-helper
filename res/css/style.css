@@ -101,7 +101,8 @@ body{
 .feed-item,#zh-question-answer-wrap>.zm-item-answer,
 .page-search .list .item,
 #zh-list-answer-wrap .zm-item,
-#zh-question-collapsed-wrap>.zm-item-answer{
+#zh-question-collapsed-wrap>.zm-item-answer,
+.zm-pm-item{
 	margin-top: 10px;
 	padding: 10px !important;
 	background-color: #ffffff;
@@ -112,7 +113,9 @@ body{
 
 .modal-dialog-title{border-radius: 0px !important;}
 .zh-general-list.topstory .feed-meta .ignore{top: 0px !important;}
-.tooltip .tooltip-inner{border-radius: 0px !important;}
+.tooltip .tooltip-inner,
+.zg-form-text-input{border-radius: 0px !important;}
+.zg-form-text-input{border: solid #cccccc 1px !important;}
 #zh-question-answer-wrap .zm-votebar,
 #zh-question-collapsed-wrap .zm-votebar{margin: -10px 0 0 -52px !important;}
 .ac-renderer{left: 12px !important;}

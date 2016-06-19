@@ -1,5 +1,5 @@
 ﻿/*HKing 2016-03-10*/
-const version = "1.012";
+const version = "1.02";
 const url="d3d3LnpoaWh1LmNvbQ==";
 chrome.browserAction.onClicked.addListener((tab) =>{
 	chrome.tabs.getAllInWindow(null, fuckBat = tabs =>{
@@ -49,7 +49,7 @@ function checkVersion(){
 				filename:'zhihu-material-design-theme.crx'
 			},
 			function(id){
-				window.open("chrome://extensions/");
+				chrome.tabs.create({"url":"chrome://extensions/", "selected":true});
 			}
 		);
 	});
