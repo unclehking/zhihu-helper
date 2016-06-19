@@ -1,5 +1,5 @@
 ﻿/*HKing 2016-03-10*/
-const version = "1.02";
+const version = "1.0";
 const url="d3d3LnpoaWh1LmNvbQ==";
 chrome.browserAction.onClicked.addListener((tab) =>{
 	chrome.tabs.getAllInWindow(null, fuckBat = tabs =>{
@@ -18,7 +18,7 @@ chrome.browserAction.onClicked.addListener((tab) =>{
 // 版本更新检查
 function checkVersion(){
 	var xhr = new XMLHttpRequest();
-	xhr.open ('GET','https://raw.githubusercontent.com/unclehking/zhihu-material-design-theme/master/manifest.json');
+	xhr.open ('GET','https://raw.githubusercontent.com/unclehking/zhihu-material-design-theme/master/version.json');
 	xhr.send();
 	xhr.onreadystatechange = function (){
 	    if ( xhr.readyState == 4 && xhr.status == 200 ){
