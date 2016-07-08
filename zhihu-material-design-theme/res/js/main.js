@@ -2,9 +2,11 @@
 var reading = {
 	// 退出阅读模式
 	close(){
-		$("body").removeClass('reading').append($("#hkingView").hide());
-		this.target.removeClass('readingOne');
-		$(document).scrollTop(this.position);
+		if($("body").hasClass("reading")){
+			$("body").removeClass('reading');
+			this.target.removeClass('readingOne');
+			$(document).scrollTop(this.position);
+		};
 	},
 	targetArr:[],  //所有需要绑定阅读事件的jQuery选择器(array)
 	targetStr:"",  //当前页面需要绑定阅读事件的jQuery选择器(string)
@@ -21,7 +23,6 @@ jQuery(function($){
 	}
 
 	//阅读模式
-	$("body").append('<div id="hkingView"></div>');
 	reading.targetArr = [
 		"#zh-question-answer-wrap .zm-item-answer",//所有答案
 		"#js-explore-tab .feed-item",// 发现
@@ -39,18 +40,28 @@ jQuery(function($){
 		reading.target = $(this);
 		reading.position = $(document).scrollTop();
 		$("body").addClass('reading');
-		$(this).addClass('readingOne').after($("#hkingView").show());
+		$(this).addClass('readingOne');
 		$(document).scrollTop(0);
 		return false;
 	});
 
 	// 退出阅读模式
-	$("#hkingView").click(function(){
+	$(document).click(function(){
 		reading.close();
 	});
+	$(document).on("click",".readingOne , .odal-dialog , .modal-dialog-bg",function(e){
+		return false;
+	})
+
 	$(document).keydown(function(e){
 		if(e.keyCode == 27){
 			reading.close();
+		}
+		if(e.keyCode == 37){
+			console.log("left");
+		}
+		if(e.keyCode == 39){
+			console.log("right");
 		}
 	})
 
