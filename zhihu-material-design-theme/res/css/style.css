@@ -257,3 +257,7 @@ html.no-touchevents .tab-navs li.tab-nav.active>a:hover,
 #zh-topic-feed-list .combine:not(.first-combine) .zm-item-vote{margin: -10px 0 0 -22px !important;}
 .page-search .related .list{background-color: #ffffff;}
 ul.related-items .item-card.topic-card{box-shadow: none !important;}
+
+.zm-light-box.modal-dialog{
+	background-color: rgba(0, 0, 0, 0.8) !important;
+}

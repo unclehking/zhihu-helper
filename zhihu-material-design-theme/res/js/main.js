@@ -2,11 +2,35 @@
 var reading = {
 	// 退出阅读模式
 	close(){
-		if($("body").hasClass("reading")){
+		if(this.isReading()){
 			$("body").removeClass('reading');
 			this.target.removeClass('readingOne');
 			$(document).scrollTop(this.position);
 		};
+	},
+	//左箭头按键阅读上一条回答
+	goLeft(){
+		if(!this.isReading()){return false;}
+		let t = this.target,prev = t.prev();
+		if(prev.length){
+			prev.addClass("readingOne");
+			this.target = prev;
+			t.removeClass("readingOne");
+		}
+	},
+	//右箭头按键阅读下一条回答
+	goRight(){
+		if(!this.isReading()){return false;}
+		let t = reading.target,next = t.next();
+		if(next.length){
+			next.addClass("readingOne");
+			reading.target = next;
+			t.removeClass("readingOne");
+		}
+	},
+	//是否处于阅读状态
+	isReading(){
+		return $("body").hasClass("reading") ? true : false;
 	},
 	targetArr:[],  //所有需要绑定阅读事件的jQuery选择器(array)
 	targetStr:"",  //当前页面需要绑定阅读事件的jQuery选择器(string)
@@ -49,20 +73,25 @@ jQuery(function($){
 	$(document).click(function(){
 		reading.close();
 	});
-	$(document).on("click",".readingOne , .odal-dialog , .modal-dialog-bg",function(e){
+	$(document).on("click",".readingOne , .zm-light-box-x1",function(e){
 		return false;
-	})
+	});
+	$(document).on("click","#zm-light-box-x2 a",function(e){
+		window.open(this.href);
+	});
 
 	$(document).keydown(function(e){
-		if(e.keyCode == 27){
-			reading.close();
+		switch(e.keyCode){
+			case 27: //ESC退出阅读
+				reading.close();
+				break;
+			case 37: //左箭头按键阅读上一条回答
+				reading.goLeft();
+				break;
+			case 39: //右箭头按键阅读下一条回答
+				reading.goRight();
+				break;
 		}
-		if(e.keyCode == 37){
-			console.log("left");
-		}
-		if(e.keyCode == 39){
-			console.log("right");
-		}
-	})
+	});
 
 });
