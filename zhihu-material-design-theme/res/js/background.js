@@ -1,5 +1,5 @@
 ﻿/*HKing 2016-03-10*/
-const version = "1.2";
+const version = "1.3";
 const url="d3d3LnpoaWh1LmNvbQ==";
 chrome.browserAction.onClicked.addListener((tab) =>{
 	chrome.tabs.getAllInWindow(null, fuckBat = tabs =>{
