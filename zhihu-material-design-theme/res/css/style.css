@@ -261,3 +261,8 @@ ul.related-items .item-card.topic-card{box-shadow: none !important;}
 .zm-light-box.modal-dialog{
 	background-color: rgba(0, 0, 0, 0.8) !important;
 }
+.reading .zm-profile-answer-page{
+	background: transparent !important;
+	border-color: transparent !important;
+	box-shadow: none !important
+}
