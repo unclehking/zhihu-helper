@@ -73,7 +73,7 @@ jQuery(function($){
 	$(document).click(function(){
 		reading.close();
 	});
-	$(document).on("click",".readingOne , .zm-light-box-x1",function(e){
+	$(document).on("click",".readingOne , .zm-light-box-x1 , .zh-backtotop",function(e){
 		return false;
 	});
 	$(document).on("click","#zm-light-box-x2 a",function(e){
