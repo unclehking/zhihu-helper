@@ -14,4 +14,7 @@
 ![github](https://raw.githubusercontent.com/unclehking/zhihu-material-design-theme/master/screenshot/zh003.png "github")  <br />
 ![github](https://raw.githubusercontent.com/unclehking/zhihu-material-design-theme/master/screenshot/zh004.png "github")  <br />
 
+### 20.6-08-11
+1、修改专栏页面样式。
+
 持续更新中...
