@@ -10,9 +10,7 @@
 
 1、双击“回答”进入阅读模式，ESC/单击非内容区域退出。
 ![github](https://raw.githubusercontent.com/unclehking/zhihu-material-design-theme/master/screenshot/zh002.png "github")  <br />
-2、Google WebStore之外的自动检测版本更新,点击下载后自动为你打开扩展程序管理页面，方便直接拖入安装。
-![github](https://raw.githubusercontent.com/unclehking/zhihu-material-design-theme/master/screenshot/zh003.png "github")  <br />
-![github](https://raw.githubusercontent.com/unclehking/zhihu-material-design-theme/master/screenshot/zh004.png "github")  <br />
+
 
 ### 20.6-08-11
 1、修改专栏页面样式。
