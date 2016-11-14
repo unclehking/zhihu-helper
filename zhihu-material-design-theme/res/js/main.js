@@ -38,11 +38,6 @@ var reading = {
 	},
 	init(){
 		var _this = this;
-		// 检查版本更新
-		if(!sessionStorage.getItem("isFirst")){
-			sessionStorage.setItem("isFirst", true);
-			chrome.runtime.sendMessage({flag: "checkVersion"}, function(response){});
-		}
 		//阅读模式
 		this.targetArr = [
 			"#zh-question-answer-wrap .zm-item-answer",//所有答案
