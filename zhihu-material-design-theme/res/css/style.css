@@ -134,7 +134,7 @@ body.reading{
 	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .05), 0 1px 4px 0 rgba(0, 0, 0, .08), 0 3px 1px -2px rgba(0, 0, 0, .2) !important;
 }
 .ProfileAvatarEditor,
-.zm-topic-cat-sub img{
+.zm-topic-cat-sub img,.UserAvatar{
 	border-radius: 50% !important;
 	box-shadow: none !important;
 }
@@ -149,6 +149,11 @@ body.reading{
 	font-size: 16px;
 	background-color: #ffffff;
 }
+.Modal-backdrop,.Modal-wrapper{
+	z-index: 1000 !important;
+}
+
+.CornerButtons,button.FeedbackButton-button-3waL,
 body.reading .zm-item-answer:not(.readingOne),
 body.reading .zu-top,
 body.reading .zu-main-sidebar,
@@ -171,10 +176,20 @@ body.reading .zu-main-content-inner .zm-profile-section-head,
 body.reading #zh-main-feed-fresh-button,
 body.reading #zh-profile-ask-wrap,
 body.reading .feed-item .ignore,
-body.reading #zh-profile-post-list > .zm-item:not(.readingOne)
+body.reading #zh-profile-post-list > .zm-item:not(.readingOne),
+body.reading #Profile-activities .List-item:not(.readingOne),
+body.reading .Profile-sideColumn,
+body.reading #Profile-activities .List-header,
+body.reading .ProfileMain-tabs,
+body.reading #ProfileHeader,
+body.reading .AppHeader,
+body.reading .ProfileMain-headerInner,
+body.reading #ProfileMain .List-item:not(.readingOne),
+body.reading .List > .List-header
 {
 	display: none !important;
 }
+body.reading .Card{border: none !important;}
 body.reading .zu-main-content-inner > #zh-question-list,
 body.reading .zu-main-content-inner > .list,
 body.reading .zu-main-content-inner > .zm-topic-list-container,

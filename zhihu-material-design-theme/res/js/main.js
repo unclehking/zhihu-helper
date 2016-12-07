@@ -42,8 +42,9 @@ var reading = {
 		this.targetArr = [
 			"#zh-question-answer-wrap .zm-item-answer",//所有答案
 			"#js-explore-tab .feed-item",// 发现
-			"#zh-profile-activity-page-list .zm-item",// 个人主页
-			"#zh-list-answer-wrap .zm-item",//收藏
+			"#Profile-activities .List-item",// 个人主页
+			"#ProfileMain .List-item",
+			"#zh-list-collection-wrap .zm-item",//收藏
 			"#js-home-feed-list .feed-item",//home
 			"#zh-topic-feed-list .feed-item",// 话题
 			".page-search .list .item",// search
