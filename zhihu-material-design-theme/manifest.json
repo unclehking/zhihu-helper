@@ -1,7 +1,8 @@
 ﻿{
-	"name": "知乎MD主题",
-	"version": "1.4",
-	"description":"知乎material design主题,双击答案进入阅读模式！",
+	"name": "知乎阅读助手",
+	"short_name":"知乎阅读助手",
+	"version": "1.0",
+	"description":"知乎阅读助手,双击答案进入阅读模式！点击扩展图标打开(如果已打开则切换到)知乎，可当书签用，省去每次输入知乎地址的麻烦。",
 	"background": {
 		"scripts": ["res/js/background.js"]
 	},
@@ -14,7 +15,7 @@
 		}
 	],
 	"permissions": [
-		"https://*.zhihu.com/*","tabs","notifications","downloads"
+		"https://*.zhihu.com/*","tabs"
 	],
 	"icons": {
 		"16": "res/pic/icon_16.png",
@@ -22,7 +23,7 @@
 		"128": "res/pic/icon_128.png"
 	},
 	"browser_action": {
-		"name": "知乎MD主题",
+		"name": "知乎阅读助手",
 		"default_icon": "res/pic/icon_128.png"
 	},
 	"web_accessible_resources": [
