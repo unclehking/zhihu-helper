@@ -12,6 +12,9 @@ var reading = {
 			$(document).scrollTop(this.position);
 		};
 	},
+	goTop(){
+		$('body').animate({scrollTop:0},500);
+	},
 	//左箭头按键阅读上一条回答
 	goLeft(){
 		if(!this.isReading()){return false;}
@@ -21,6 +24,7 @@ var reading = {
 			this.target = prev;
 			t.removeClass("readingOne");
 		}
+		this.goTop();
 	},
 	//右箭头按键阅读下一条回答
 	goRight(){
@@ -31,6 +35,7 @@ var reading = {
 			reading.target = next;
 			t.removeClass("readingOne");
 		}
+		this.goTop();
 	},
 	//是否处于阅读状态
 	isReading(){
