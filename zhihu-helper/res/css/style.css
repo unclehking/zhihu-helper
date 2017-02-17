@@ -189,7 +189,13 @@ body.reading #ProfileHeader,
 body.reading .AppHeader,
 body.reading .ProfileMain-headerInner,
 body.reading #ProfileMain .List-item:not(.readingOne),
-body.reading .List > .List-header
+body.reading .List > .List-header,
+body.reading .Question-mainColumn .List-item,
+body.reading .QuestionHeader,
+body.reading .Question-sideColumn,
+body.reading .CollapsedAnswers-bar,
+body.reading .QuestionAnswers-answerAdd,
+body.reading .Button.QuestionMainAction
 {
 	display: none !important;
 }
@@ -202,7 +208,8 @@ body.reading .zu-main-content-inner > #js-explore-tab,
 body.reading .zu-main-content-inner  .readingOne .zm-item-answer,
 body.reading .zu-main-content-inner #zh-list-answer-wrap,
 body.reading .zu-main-content-inner > div[itemscope],
-body.reading .zu-main-content-inner > .zm-profile-section-wrap
+body.reading .zu-main-content-inner > .zm-profile-section-wrap,
+body.reading .Question-mainColumn .List-item.readingOne
 {
 	display: block !important;
 }

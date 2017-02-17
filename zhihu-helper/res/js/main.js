@@ -45,7 +45,7 @@ var reading = {
 		var _this = this;
 		//阅读模式
 		this.targetArr = [
-			"#zh-question-answer-wrap .zm-item-answer",//所有答案
+			".Question-mainColumn .List-item",//所有答案
 			"#js-explore-tab .feed-item",// 发现
 			"#Profile-activities .List-item",// 个人主页
 			"#ProfileMain .List-item",
