@@ -50,7 +50,7 @@ var reading = {
 			"#Profile-activities .List-item",// 个人主页
 			"#ProfileMain .List-item",
 			"#zh-list-collection-wrap .zm-item",//收藏
-			"#js-home-feed-list .feed-item",//home
+			".TopstoryMain .Card.TopstoryItem",//home
 			"#zh-topic-feed-list .feed-item",// 话题
 			".page-search .list .item",// search
 			"#zh-profile-answer-list .zm-item", //某人的回答
@@ -95,4 +95,15 @@ var reading = {
 
 jQuery(function($){
 	reading.init();
+	$(document).on('mouseover','a.external:not(.wrap)',function(e){
+		var url = this.href.replace('https://link.zhihu.com/?target=','');
+		var t = $(this);
+		if(t.find('img').length==0){
+			var img = $(`<img src="https://hking.me/qrcode?text=${url}" />`);
+			t.append(img);
+			t.parents('.RichContent-inner').css('overflow','visible');
+		}
+		return false;
+	})
 });
+
